@@ -10,7 +10,7 @@
                         <form class="" role="form" method="POST" action="{{ url('/login') }}">
                             <div class="row">
                             {{ csrf_field() }}
-                            <div class="input-field col s12">
+                            <div class="input-field col s12{{ $errors->has('email') ? ' has-error' : '' }}">
                                 <label for="email" class="">E-Mail Address</label>
                                 <input id="email" type="email" class="validate" name="email" value="{{ old('email') }}" placeholder="Email Address">
                                 @if ($errors->has('email'))
@@ -20,7 +20,7 @@
                                 @endif
                             </div>
                             
-                            <div class="input-field col s12">
+                            <div class="input-field col s12{{ $errors->has('password') ? ' has-error' : '' }}">
                                 <label for="password" class="">Password</label>
                                 <input id="password" type="password" class="form-control" name="password" placeholder="Password">
                                 @if ($errors->has('password'))
