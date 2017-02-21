@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col s12 m6 push-m3">
-                <div class="card-panel ">
+                <div class="card-panel hoverable ">
                     <div class="card-content">
                         <span class="card-title">Login</span>
                         <form class="" role="form" method="POST" action="{{ url('/login') }}">
@@ -29,7 +29,7 @@
                                     </span>
                                 @endif
                             </div>
-                            
+
                             <div class="input-field col s12">
                                 <input type="checkbox" name="remember" class="filled-in" id="filled-in-box">
                                 <label for="filled-in-box"> Remember Me</label>
