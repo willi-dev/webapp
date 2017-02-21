@@ -18,25 +18,13 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Logo</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                @if( Auth::guest() )
-                    <li><a href="{{ url('/login') }}">Login</a></li>
-                    <li><a href="{{ url('/register') }}">Register</a></li>
-                @else
-                    <li><a href="{{ url('/logout') }}"> {{Auth::user()->name}} Logout</a></li>
-                @endif
-            </ul>
-        </div>
-    </nav>
-
+    
+    @include('layouts.header-nav')
     @yield('content')
     
     {!! Html::script('app-angular/angular.js') !!}
-    {!! Html::script('assets/dist/js/bin/jquery-3.1.1.min.js') !!}
-    {!! Html::script('assets/dist/js/bin/materialize.min.js') !!}
+    {!! Html::script('assets/dist/js/jquery-3.1.1.min.js') !!}
+    {!! Html::script('assets/dist/js/materialize.min.js') !!}
 
     {!! Html::script('app-angular/app.js') !!}
     {!! Html::script('app-angular/controllers/bikes.js') !!}
