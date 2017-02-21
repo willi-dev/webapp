@@ -19,3 +19,7 @@ Route::get('/api/v1/bikes/{id?}', 'Bikes@index');
 Route::post( '/api/v1/bikes', 'Bikes@store' );
 Route::post( '/api/v1/bikes/{id}', 'Bikes@update' );
 Route::delete( '/api/v1/bikes/{id}', 'Bikes@destroy' );
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

@@ -1,40 +1,22 @@
-@extends('templates/t_index')
+@extends('layouts.app')
 
 @section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-heading">Dashboard</div>
 
-<div class="container" ng-controller="BikeController">
-	
-	<div class="row">
-		<div class="col s12 m12">
-			<h1>Bikes</h1>
-		</div>
-	</div>
+                <div class="panel-body">
+                	@if (Auth::guest())
 
-	<div class="row">
-		<div class="col s12 m12">
-			<input type="hidden" name="bike_id_owner" value="" >
-			<div class="row">
-				<div class="input-field col s12 m12">
-					<input type="text" placeholder="bike name" id="bike_name" name="bike_name" class="validate">
-					<label for="bike_name">Bike Name</label>
-				</div>
-			</div>
-			<div class="row">
-				<div class="input-field col s12 m12">
-					<input type="text" placeholder="register number" id="bike_register_number" name="bike_register_number" class="validate">
-					<label for="bike_register_number">Bike Register Number</label>
-				</div>
-			</div>
-			<div class="row">
-				<div class="input-field col s12 m12">
-					<textarea name="bike_description" id="bike_description" class="materialize-textarea"></textarea>
-					<label for="bike_description">Bike Description</label>
-				</div>
-			</div>
-		</div>
-		
-	</div>
-
+	                   Login Terlebih Dahulu
+	                @else
+	                	You are logged in!
+	                @endif
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-@stop
+@endsection

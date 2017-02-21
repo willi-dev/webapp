@@ -5,4 +5,5 @@ app.controller('bikesController', function( $scope, $http, API_URL ){
 			$scope.bikes = response;
 		} );
 
+	
 });
