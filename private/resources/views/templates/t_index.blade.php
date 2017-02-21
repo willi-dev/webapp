@@ -5,17 +5,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE-edge">
 	<title>Bike Register</title>
 
-	{!! Html::style( 'assets/css/materialize.css' ) !!}
+	{!! Html::style( 'assets/dist/css/materialize.css' ) !!}
 </head>
 <body>
 	
 	@yield('content')
 	{!! Html::script('app-angular/angular.js') !!}
-	{!! Html::script('assets/js/bin/jquery-3.1.1.min.js') !!}
-	{!! Html::script('assets/js/bin/materialize.min.js') !!}
+	{!! Html::script('assets/dist/js/bin/jquery-3.1.1.min.js') !!}
+	{!! Html::script('assets/dist/js/bin/materialize.min.js') !!}
 
 	{!! Html::script('app-angular/app.js') !!}
-	{!! Html::script('app-angular/controller/bikes.js') !!}
+	{!! Html::script('app-angular/controllers/bikes.js') !!}
 
 </body>
 </html>
